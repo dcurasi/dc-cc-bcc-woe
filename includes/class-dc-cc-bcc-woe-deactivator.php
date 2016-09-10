@@ -30,7 +30,15 @@ class Dc_Cc_Bcc_Woe_Deactivator {
 	 * @since    1.0.0
 	 */
 	public static function deactivate() {
-
+		delete_option('dc_wech_activate');
+	    delete_option('dc_wech_email_list_cc');
+	    delete_option('dc_wech_email_list_bcc');
+	    delete_option('dc_wech_new_order');
+	    delete_option('dc_wech_cancelled_order');
+	    delete_option('dc_wech_failed_order');
+	    delete_option('dc_wech_processing_order');
+	    delete_option('dc_wech_completed_order');
+	    delete_option('dc_wech_refunded_order');
 	}
 
 }

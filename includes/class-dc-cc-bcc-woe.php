@@ -153,7 +153,14 @@ class Dc_Cc_Bcc_Woe {
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
-
+		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_menu_page' );
+		$this->loader->add_action( 'admin_init', $plugin_admin, 'settings_api_init' );
+		if( $_GET['settings-updated'] ) {
+			$this->loader->add_action( 'admin_notices', $plugin_admin, 'update_notice' );
+		}
+		if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			$this->loader->add_action( 'admin_notices', $plugin_admin, 'error_notice' );
+		}
 	}
 
 	/**
@@ -166,9 +173,13 @@ class Dc_Cc_Bcc_Woe {
 	private function define_public_hooks() {
 
 		$plugin_public = new Dc_Cc_Bcc_Woe_Public( $this->get_plugin_name(), $this->get_version() );
-
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+			if(get_option('dc_wech_activate')) {
+				$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+				$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+				$this->loader->add_filter( 'woocommerce_email_headers', $plugin_public, 'custom_headers_email_function', 10, 2);
+			}
+		}
 
 	}
 

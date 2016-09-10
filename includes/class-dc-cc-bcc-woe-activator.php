@@ -30,7 +30,15 @@ class Dc_Cc_Bcc_Woe_Activator {
 	 * @since    1.0.0
 	 */
 	public static function activate() {
-
+		add_option('dc_wech_activate', 1);
+	    add_option('dc_wech_email_list_cc', '');
+	    add_option('dc_wech_email_list_bcc', '');
+	    add_option('dc_wech_new_order', 1);
+	    add_option('dc_wech_cancelled_order', 1);
+	    add_option('dc_wech_failed_order', 1);
+	    add_option('dc_wech_processing_order', 1);
+	    add_option('dc_wech_completed_order', 1);
+	    add_option('dc_wech_refunded_order', 1);
 	}
 
 }

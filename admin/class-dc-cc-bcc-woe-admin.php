@@ -100,4 +100,50 @@ class Dc_Cc_Bcc_Woe_Admin {
 
 	}
 
+	//inizializzazione menu di amministrazione
+	function add_menu_page()
+	{
+	    add_submenu_page('woocommerce','CC & BCC', 'CC & BCC', 'manage_options', 'dc-wech-menu-page', array( $this,'create_admin_interface' ));
+	}
+
+	/**
+	 * Callback function for the admin settings page.
+	 *
+	 * @since    1.0.0
+	 */
+	public function create_admin_interface(){
+
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/dc-cc-bcc-woe-admin-display.php';
+
+	}
+
+	/**
+	 * Creates our settings sections with fields etc.
+	 *
+	 * @since    1.0.0
+	 */
+	public function settings_api_init(){
+		register_setting('dc_wech_options_group', 'dc_wech_activate');
+	    register_setting('dc_wech_options_group', 'dc_wech_email_list_cc');
+	    register_setting('dc_wech_options_group', 'dc_wech_email_list_bcc');
+	    register_setting('dc_wech_options_group', 'dc_wech_new_order');
+	    register_setting('dc_wech_options_group', 'dc_wech_cancelled_order');
+	    register_setting('dc_wech_options_group', 'dc_wech_failed_order');
+	    register_setting('dc_wech_options_group', 'dc_wech_processing_order');
+	    register_setting('dc_wech_options_group', 'dc_wech_completed_order');
+	    register_setting('dc_wech_options_group', 'dc_wech_refunded_order');
+	}
+
+	public function update_notice() {
+		echo '<div class="updated notice">
+        		<p>The options have been saved successfully.</p>
+    		  </div>';
+	}
+
+	public function error_notice() {
+		echo '<div class="notice notice-error is-dismissible">
+        		<p>CC & BCC for Woocommerce Order Emails is active but does not work. You need to install WooCommerce because the plugin is working properly.</p>
+    		  </div>';
+	}
+
 }
