@@ -31,6 +31,8 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 
 == Screenshots ==
 
+1. The admin panel
+
 
 == Changelog ==
 
