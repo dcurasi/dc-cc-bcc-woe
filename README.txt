@@ -1,6 +1,6 @@
 === CC & BCC for Woocommerce Order Emails ===
 
-Donate link:
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KZRGHFSGGRXU6
 Contributors: dcurasi
 Tags: email, emails, woocommerce order, bcc, woocommerce, e-commerce, shop, woocommerce emails, woocommerce email, cc, cc email, bcc email, 
 Requires at least: 3.0.1
@@ -24,7 +24,7 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 == Installation ==
 
 1. Unzip the downloaded zip file.
-2. Upload `dc-cc-bcc-woe` folder to the `/wp-content/plugins/` directory
+2. Upload `cc-bcc-for-woocommerce-order-emails` folder to the `/wp-content/plugins/` directory
 3. Activate the plugin through the \'Plugins\' menu in WordPress
 4. Go to Woocommerce > CC & BCC for change the default options
 
@@ -35,6 +35,11 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 
 
 == Changelog ==
+
+= 1.1.0 - 16/10/16 =
+* Fix - Fixed submit button of the admin panel
+* Tweak - Changed the method for displaying the confirmation message for saved options
+* Dev - Added donation link
 
 = 1.0 =
 * Initial public version

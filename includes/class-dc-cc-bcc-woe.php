@@ -64,12 +64,12 @@ class Dc_Cc_Bcc_Woe {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 */
 	public function __construct() {
 
 		$this->plugin_name = 'dc-cc-bcc-woe';
-		$this->version = '1.0.0';
+		$this->version = '1.1.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -144,7 +144,7 @@ class Dc_Cc_Bcc_Woe {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    1.0.0
+	 * @since    1.1.0
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
@@ -155,9 +155,6 @@ class Dc_Cc_Bcc_Woe {
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_menu_page' );
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'settings_api_init' );
-		if( $_GET['settings-updated'] ) {
-			$this->loader->add_action( 'admin_notices', $plugin_admin, 'update_notice' );
-		}
 		if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			$this->loader->add_action( 'admin_notices', $plugin_admin, 'error_notice' );
 		}

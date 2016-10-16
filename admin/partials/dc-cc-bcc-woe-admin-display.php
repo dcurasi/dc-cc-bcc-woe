@@ -18,6 +18,7 @@
 <form method="post" action="options.php">
     <!--necessaria per il corretto aggiornamento dei dati-->
     <?php settings_fields('dc_wech_options_group'); ?>
+    <?php settings_errors(); ?>
     <table class="form-table">
            <tbody>
                 <tr valign="top">
@@ -89,9 +90,7 @@
                 <tr valign="top">
                    <th scope="row"></th>
                    <td>
-                       <p>
-                           <input type="submit" class="button-primary" id="submit" name="submit" value="Salva le modifiche">
-                       </p>
+                       <?php submit_button(); ?>
                    </td>
                 </tr>
             </tbody>
