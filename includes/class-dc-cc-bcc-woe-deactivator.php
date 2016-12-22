@@ -27,7 +27,7 @@ class Dc_Cc_Bcc_Woe_Deactivator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.0.0
+	 * @since    1.2.0
 	 */
 	public static function deactivate() {
 		delete_option('dc_wech_activate');
@@ -39,6 +39,7 @@ class Dc_Cc_Bcc_Woe_Deactivator {
 	    delete_option('dc_wech_processing_order');
 	    delete_option('dc_wech_completed_order');
 	    delete_option('dc_wech_refunded_order');
+	    delete_option('dc_wech_customer_new_account');
 	}
 
 }

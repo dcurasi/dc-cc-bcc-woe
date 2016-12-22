@@ -80,7 +80,7 @@ class Dc_Cc_Bcc_Woe_Public {
 	/**
 	 * Register the JavaScript for the public-facing side of the site.
 	 *
-	 * @since    1.0.0
+	 * @since    1.2.0
 	 */
 	public function enqueue_scripts() {
 
@@ -142,6 +142,14 @@ class Dc_Cc_Bcc_Woe_Public {
 		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
 		    }
 		}
+
+		if(get_option('dc_wech_customer_new_account')) {
+		    if ($object == 'customer_new_account') {
+		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
+		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    }
+		}
+
 	    return $headers;
 	}
 

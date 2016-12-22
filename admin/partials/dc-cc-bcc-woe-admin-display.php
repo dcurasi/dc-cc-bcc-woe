@@ -6,7 +6,7 @@
  * This file is used to markup the admin-facing aspects of the plugin.
  *
  * @link       https://github.com/dcurasi
- * @since      1.0.0
+ * @since      1.2.0
  *
  * @package    Dc_Cc_Bcc_Woe
  * @subpackage Dc_Cc_Bcc_Woe/admin/partials
@@ -83,6 +83,11 @@
                           <label for="dc_wech_refunded_order">
                             <input type="checkbox" id="dc_wech_refunded_order" value="1" <?php checked(get_option('dc_wech_refunded_order'), 1); ?> name="dc_wech_refunded_order">
                             Refunded Order
+                          </label>
+                          <br>
+                          <label for="dc_wech_customer_new_account">
+                            <input type="checkbox" id="dc_wech_customer_new_account" value="1" <?php checked(get_option('dc_wech_customer_new_account'), 1); ?> name="dc_wech_customer_new_account">
+                            New Account
                           </label>
                         </fieldset>
                     </td>

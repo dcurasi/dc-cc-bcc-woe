@@ -27,7 +27,7 @@ class Dc_Cc_Bcc_Woe_Activator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.0.0
+	 * @since    1.2.0
 	 */
 	public static function activate() {
 		add_option('dc_wech_activate', 1);
@@ -39,6 +39,7 @@ class Dc_Cc_Bcc_Woe_Activator {
 	    add_option('dc_wech_processing_order', 1);
 	    add_option('dc_wech_completed_order', 1);
 	    add_option('dc_wech_refunded_order', 1);
+	    add_option('dc_wech_customer_new_account', 1);
 	}
 
 }
