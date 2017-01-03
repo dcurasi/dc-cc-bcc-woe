@@ -150,6 +150,13 @@ class Dc_Cc_Bcc_Woe_Public {
 		    }
 		}
 
+		if(get_option('dc_wech_customer_on_hold')) {
+		    if ($object == 'customer_on_hold_order') {
+		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
+		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    }
+		}
+
 	    return $headers;
 	}
 

@@ -6,7 +6,7 @@
  * This file is used to markup the admin-facing aspects of the plugin.
  *
  * @link       https://github.com/dcurasi
- * @since      1.2.0
+ * @since      1.3.0
  *
  * @package    Dc_Cc_Bcc_Woe
  * @subpackage Dc_Cc_Bcc_Woe/admin/partials
@@ -68,6 +68,11 @@
                           <label for="dc_wech_failed_order">
                             <input type="checkbox" id="dc_wech_failed_order" value="1" <?php checked(get_option('dc_wech_failed_order'), 1); ?> name="dc_wech_failed_order">
                             Failed Order
+                          </label>
+                          <br>
+                          <label for="dc_wech_customer_on_hold">
+                            <input type="checkbox" id="dc_wech_customer_on_hold" value="1" <?php checked(get_option('dc_wech_customer_on_hold'), 1); ?> name="dc_wech_customer_on_hold">
+                            On hold Order
                           </label>
                           <br>
                           <label for="dc_wech_processing_order">

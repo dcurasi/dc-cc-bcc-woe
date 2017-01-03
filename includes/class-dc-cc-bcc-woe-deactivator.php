@@ -40,6 +40,7 @@ class Dc_Cc_Bcc_Woe_Deactivator {
 	    delete_option('dc_wech_completed_order');
 	    delete_option('dc_wech_refunded_order');
 	    delete_option('dc_wech_customer_new_account');
+	    delete_option('dc_wech_customer_on_hold');
 	}
 
 }

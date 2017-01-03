@@ -120,7 +120,7 @@ class Dc_Cc_Bcc_Woe_Admin {
 	/**
 	 * Creates our settings sections with fields etc.
 	 *
-	 * @since    1.2.0
+	 * @since    1.3.0
 	 */
 	public function settings_api_init(){
 		register_setting('dc_wech_options_group', 'dc_wech_activate');
@@ -133,6 +133,7 @@ class Dc_Cc_Bcc_Woe_Admin {
 	    register_setting('dc_wech_options_group', 'dc_wech_completed_order');
 	    register_setting('dc_wech_options_group', 'dc_wech_refunded_order');
 	    register_setting('dc_wech_options_group', 'dc_wech_customer_new_account');
+	    register_setting('dc_wech_options_group', 'dc_wech_customer_on_hold');
 	}
 
 	public function error_notice() {

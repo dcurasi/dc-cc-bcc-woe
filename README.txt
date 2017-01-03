@@ -22,6 +22,7 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 * New Order
 * Cancelled Order
 * Failed Order
+* On hold Order
 * Processing Order
 * Completed Order
 * Refunded Order
@@ -47,6 +48,9 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 
 
 == Changelog ==
+
+= 1.3.0 - 03/01/17 =
+* New - Added possibility to insert CC and BCC for On hold email
 
 = 1.2.0 - 22/12/16 =
 * New - Added possibility to insert CC and BCC for New Account email
