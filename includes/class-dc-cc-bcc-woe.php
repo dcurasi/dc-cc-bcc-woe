@@ -64,12 +64,12 @@ class Dc_Cc_Bcc_Woe {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.3.0
+	 * @since    1.4.0
 	 */
 	public function __construct() {
 
 		$this->plugin_name = 'dc-cc-bcc-woe';
-		$this->version = '1.3.0';
+		$this->version = '1.4.0';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -144,19 +144,24 @@ class Dc_Cc_Bcc_Woe {
 	 * Register all of the hooks related to the admin area functionality
 	 * of the plugin.
 	 *
-	 * @since    1.1.0
+	 * @since    1.4.0
 	 * @access   private
 	 */
 	private function define_admin_hooks() {
 
 		$plugin_admin = new Dc_Cc_Bcc_Woe_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		//$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
+		//$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
 		$this->loader->add_action( 'admin_menu', $plugin_admin, 'add_menu_page' );
 		$this->loader->add_action( 'admin_init', $plugin_admin, 'settings_api_init' );
 		if ( !in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			$this->loader->add_action( 'admin_notices', $plugin_admin, 'error_notice' );
+		}
+		else {
+			if ( !in_array( 'woocommerce-bookings/woocommmerce-bookings.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && get_option('dc_wech_activate_bookings') ) {
+				$this->loader->add_action( 'admin_notices', $plugin_admin, 'error_notice_booking' );
+			}
 		}
 	}
 
@@ -172,8 +177,8 @@ class Dc_Cc_Bcc_Woe {
 		$plugin_public = new Dc_Cc_Bcc_Woe_Public( $this->get_plugin_name(), $this->get_version() );
 		if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
 			if(get_option('dc_wech_activate')) {
-				$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-				$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+				//$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
+				//$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
 				$this->loader->add_filter( 'woocommerce_email_headers', $plugin_public, 'custom_headers_email_function', 10, 2);
 			}
 		}

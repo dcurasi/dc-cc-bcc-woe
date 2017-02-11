@@ -1,0 +1,138 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: CC & BCC for Woocommerce Order Emails\n"
+"POT-Creation-Date: 2017-01-26 20:47+0100\n"
+"PO-Revision-Date: 2017-01-13 20:25+0100\n"
+"Last-Translator: \n"
+"Language-Team: Dario Curasì <curasi.d87@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/class-dc-cc-bcc-woe-admin.php:156
+msgid ""
+"CC & BCC for Woocommerce Order Emails is active but does not work. You need "
+"to install WooCommerce because the plugin is working properly."
+msgstr ""
+
+#: admin/class-dc-cc-bcc-woe-admin.php:167
+msgid ""
+"The options for Woocommerce Bookings are enabled in CC & BCC for "
+"Woocommerce Order Emails but does not work. You need to install Woocommerce "
+"Bookings or disable these options because the plugin is working properly."
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:17
+msgid "CC & BCC for Woocommerce Order Emails"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:22
+msgid "Configuration"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:27
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:115
+msgid "Enable / Disable"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:31
+msgid "Activate CC & BCC Options"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:37
+msgid "Email List CC"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:41
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:50
+msgid "Enter emails separated by commas"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:46
+msgid "Email List BCC"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:55
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:125
+msgid "Email Type"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:61
+msgid "New Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:66
+msgid "Cancelled Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:71
+msgid "Failed Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:76
+msgid "On hold Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:81
+msgid "Processing Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:86
+msgid "Completed Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:91
+msgid "Refunded Order"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:96
+msgid "Customer invoice"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:101
+msgid "New Account"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:109
+msgid "Woocommerce Bookings Emails Options"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:110
+msgid "Use this section if you have installed Woocommerce Bookings."
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:119
+msgid "Activate WC Bookings Options"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:131
+msgid "New Booking"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:136
+msgid "Booking Reminder"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:141
+msgid "Booking Confirmed"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:146
+msgid "Booking Notification"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:151
+msgid "Booking Cancelled"
+msgstr ""
+
+#: admin/partials/dc-cc-bcc-woe-admin-display.php:156
+msgid "Admin Booking Cancelled"
+msgstr ""

@@ -9,14 +9,14 @@
  * that starts the plugin.
  *
  * @link              https://github.com/dcurasi
- * @since             1.3.0
+ * @since             1.4.0
  * @package           Dc_Cc_Bcc_Woe
  *
  * @wordpress-plugin
  * Plugin Name:       CC & BCC for Woocommerce Order Emails
  * Plugin URI:        https://github.com/dcurasi/dc-cc-bcc-woe
  * Description:       It makes it possible to insert CC and BCC in Wooommerce emails.
- * Version:           1.3.0
+ * Version:           1.4.0
  * Author:            Dario Curasì
  * Author URI:        https://github.com/dcurasi
  * License:           GPL-2.0+

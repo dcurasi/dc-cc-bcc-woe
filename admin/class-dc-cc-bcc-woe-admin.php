@@ -120,7 +120,7 @@ class Dc_Cc_Bcc_Woe_Admin {
 	/**
 	 * Creates our settings sections with fields etc.
 	 *
-	 * @since    1.3.0
+	 * @since    1.4.0
 	 */
 	public function settings_api_init(){
 		register_setting('dc_wech_options_group', 'dc_wech_activate');
@@ -134,11 +134,37 @@ class Dc_Cc_Bcc_Woe_Admin {
 	    register_setting('dc_wech_options_group', 'dc_wech_refunded_order');
 	    register_setting('dc_wech_options_group', 'dc_wech_customer_new_account');
 	    register_setting('dc_wech_options_group', 'dc_wech_customer_on_hold');
+	    register_setting('dc_wech_options_group', 'dc_wech_customer_invoice');
+	    //WooCommerce Bookings Options
+	    register_setting('dc_wech_options_group', 'dc_wech_activate_bookings');
+	    register_setting('dc_wech_options_group', 'dc_wech_new_booking');
+	    register_setting('dc_wech_options_group', 'dc_wech_booking_reminder');
+	    register_setting('dc_wech_options_group', 'dc_wech_booking_confirmed');
+	    register_setting('dc_wech_options_group', 'dc_wech_booking_notification');
+	    register_setting('dc_wech_options_group', 'dc_wech_booking_cancelled');
+	    register_setting('dc_wech_options_group', 'dc_wech_admin_booking_cancelled');
 	}
 
+
+	/**
+	 * Error notice when Woocommerce is not installed.
+	 *
+	 * @since    1.4.0
+	 */
 	public function error_notice() {
 		echo '<div class="notice notice-error is-dismissible">
-        		<p>CC & BCC for Woocommerce Order Emails is active but does not work. You need to install WooCommerce because the plugin is working properly.</p>
+        		<p>'.__('CC & BCC for Woocommerce Order Emails is active but does not work. You need to install WooCommerce because the plugin is working properly.', 'dc-cc-bcc-woe').'</p>
+    		  </div>';
+	}
+
+	/**
+	 * Error notice when Woocommerce Bookings is not installed.
+	 *
+	 * @since    1.4.0
+	 */
+	public function error_notice_booking() {
+		echo '<div class="notice notice-error is-dismissible">
+        		<p>'.__('The options for Woocommerce Bookings are enabled in CC & BCC for Woocommerce Order Emails but does not work. You need to install Woocommerce Bookings or disable these options because the plugin is working properly.', 'dc-cc-bcc-woe').'</p>
     		  </div>';
 	}
 

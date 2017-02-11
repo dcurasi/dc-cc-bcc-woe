@@ -27,7 +27,7 @@ class Dc_Cc_Bcc_Woe_Deactivator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.2.0
+	 * @since    1.4.0
 	 */
 	public static function deactivate() {
 		delete_option('dc_wech_activate');
@@ -41,6 +41,14 @@ class Dc_Cc_Bcc_Woe_Deactivator {
 	    delete_option('dc_wech_refunded_order');
 	    delete_option('dc_wech_customer_new_account');
 	    delete_option('dc_wech_customer_on_hold');
+	    delete_option('dc_wech_customer_invoice');
+	    delete_option('dc_wech_activate_bookings');
+	    delete_option('dc_wech_new_booking');
+	    delete_option('dc_wech_booking_reminder');
+	    delete_option('dc_wech_booking_confirmed');
+	    delete_option('dc_wech_booking_notification');
+	    delete_option('dc_wech_booking_cancelled');
+	    delete_option('dc_wech_admin_booking_cancelled');
 	}
 
 }

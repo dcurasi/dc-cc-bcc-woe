@@ -27,7 +27,7 @@ class Dc_Cc_Bcc_Woe_Activator {
 	 *
 	 * Long Description.
 	 *
-	 * @since    1.3.0
+	 * @since    1.4.0
 	 */
 	public static function activate() {
 		add_option('dc_wech_activate', 1);
@@ -41,6 +41,14 @@ class Dc_Cc_Bcc_Woe_Activator {
 	    add_option('dc_wech_refunded_order', 1);
 	    add_option('dc_wech_customer_new_account', 1);
 	    add_option('dc_wech_customer_on_hold', 1);
+	    add_option('dc_wech_customer_invoice', 1);
+	    add_option('dc_wech_activate_bookings', 0);
+	    add_option('dc_wech_new_booking', 0);
+	    add_option('dc_wech_booking_reminder', 0);
+	    add_option('dc_wech_booking_confirmed', 0);
+	    add_option('dc_wech_booking_notification', 0);
+	    add_option('dc_wech_booking_cancelled', 0);
+	    add_option('dc_wech_admin_booking_cancelled', 0);
 	}
 
 }

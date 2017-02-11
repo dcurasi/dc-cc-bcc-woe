@@ -103,58 +103,111 @@ class Dc_Cc_Bcc_Woe_Public {
 	function custom_headers_email_function( $headers, $object ) {
 		if(get_option('dc_wech_new_order')) {
 		    if ($object == 'new_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_cancelled_order')) {
 		    if ($object == 'cancelled_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_failed_order')) {
 		    if ($object == 'failed_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_processing_order')) {
 		    if ($object == 'customer_processing_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_completed_order')) {
 		    if ($object == 'customer_completed_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_refunded_order')) {
 		    if ($object == 'customer_refunded_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_customer_new_account')) {
 		    if ($object == 'customer_new_account') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
 		}
 
 		if(get_option('dc_wech_customer_on_hold')) {
 		    if ($object == 'customer_on_hold_order') {
-		    	$headers .= 'CC: ' . get_option('dc_wech_email_list_cc') . "\r\n";
-		        $headers .= 'BCC: ' . get_option('dc_wech_email_list_bcc') . "\r\n";
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
 		    }
+		}
+
+		if(get_option('dc_wech_customer_invoice')) {
+		    if ($object == 'customer_invoice') {
+		    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+		        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+		    }
+		}
+
+		if(get_option('dc_wech_activate_bookings')) {
+
+			if(get_option('dc_wech_new_booking')) {
+			    if ($object == 'new_booking') {
+			    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+			        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+			    }
+			}
+
+			if(get_option('dc_wech_booking_reminder')) {
+			    if ($object == 'booking_reminder') {
+			    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+			        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+			    }
+			}
+
+			if(get_option('dc_wech_booking_confirmed')) {
+			    if ($object == 'booking_confirmed') {
+			    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+			        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+			    }
+			}
+
+			if(get_option('dc_wech_booking_notification')) {
+			    if ($object == 'booking_notification') {
+			    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+			        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+			    }
+			}
+
+			if(get_option('dc_wech_booking_cancelled')) {
+			    if ($object == 'booking_cancelled') {
+			    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+			        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+			    }
+			}
+
+			if(get_option('dc_wech_admin_booking_cancelled')) {
+			    if ($object == 'admin_booking_cancelled') {
+			    	$headers .= 'CC: ' . str_replace(' ', '', get_option('dc_wech_email_list_cc')) . "\r\n";
+			        $headers .= 'BCC: ' . str_replace(' ', '', get_option('dc_wech_email_list_bcc')) . "\r\n";
+			    }
+			}
+
 		}
 
 	    return $headers;
