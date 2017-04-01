@@ -64,12 +64,12 @@ class Dc_Cc_Bcc_Woe {
 	 * Load the dependencies, define the locale, and set the hooks for the admin area and
 	 * the public-facing side of the site.
 	 *
-	 * @since    1.4.0
+	 * @since    1.4.1
 	 */
 	public function __construct() {
 
 		$this->plugin_name = 'dc-cc-bcc-woe';
-		$this->version = '1.4.0';
+		$this->version = '1.4.1';
 
 		$this->load_dependencies();
 		$this->set_locale();

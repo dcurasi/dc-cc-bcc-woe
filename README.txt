@@ -5,7 +5,7 @@ Contributors: dcurasi
 Tags: email, emails, woocommerce order, bcc, woocommerce, e-commerce, shop, woocommerce emails, woocommerce email, cc, cc email, bcc email, woocommerce bookings, woocommerce booking, booking, woocommerce booking emails, booking emails
 Requires at least: 3.0.1
 Tested up to: 4.7.2
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 
@@ -26,7 +26,7 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 * Processing Order
 * Completed Order
 * Refunded Order
-* Customer invoice 
+* Customer invoice
 * New Account
 * New Booking
 * Booking Reminder
@@ -39,6 +39,7 @@ CC & BCC for Woocommerce Order Emails is a plugin that makes it possible to inse
 = Available Languages =
 
 * English
+* Italiano
 
 
 = If you like the plugin, please give it a rating. =
@@ -67,6 +68,9 @@ This is the GitHub Repository [dc-cc-bcc-woe](https://github.com/dcurasi/dc-cc-b
 
 
 == Changelog ==
+
+= 1.4.1 - 01/04/17 =
+* New - Added Italian translation
 
 = 1.4.0 - 11/02/17 =
 * New - Added possibility to insert CC and BCC for Customer invoice
