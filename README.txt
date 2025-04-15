@@ -1,7 +1,7 @@
 === CC & BCC for Woocommerce Order Emails ===
 
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KZRGHFSGGRXU6
-Contributors: dcurasi
+Contributors: dcurasi, wing.louie
 Tags: email, emails, woocommerce order, bcc, woocommerce, e-commerce, shop, woocommerce emails, woocommerce email, cc, cc email, bcc email, woocommerce bookings, woocommerce booking, booking, woocommerce booking emails, booking emails
 Requires at least: 3.0.1
 Tested up to: 4.7.2
@@ -68,6 +68,9 @@ This is the GitHub Repository [dc-cc-bcc-woe](https://github.com/dcurasi/dc-cc-b
 
 
 == Changelog ==
+
+= 1.4.2 - 07/14/24 =
+* New - Added sanitization for the emails in the CC and BCC fields.
 
 = 1.4.1 - 01/04/17 =
 * New - Added Italian translation
